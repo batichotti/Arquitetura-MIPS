@@ -25,7 +25,16 @@ add $t1, $s1, $s2
 sub $s0, $t1, $t0
 
 # g) a = (b - 1) + d; c = a + c;
-
+addi $t0, $s1, -1
+add $s0, $t0, $s3
+add $s2, $s2, $s0
 
 # h) a = e - (b - c); d = a + 10;
+sub $t0, $s1, $s2
+sub $s0, $s4, $t0
+addi $s3, $s1, 10
+
 # i) a += b - c; d = a + 10;
+sub $t0, $s1, $s2
+add $s0, $s0, $t0
+addi $s3, $s0, 10
