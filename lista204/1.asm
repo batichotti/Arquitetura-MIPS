@@ -22,7 +22,8 @@ add $t4, $t4, $s2
 lw $t5, 0($t4)
 slt $t6, $t5, $s1  # 1 se D[i] for menor q b
 beq $t6, $zero, EXIT
-
+add $t7, $t5, $s0
+sw $t7, 0($t4)
 EXIT:
 
 # c)
