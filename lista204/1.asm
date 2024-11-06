@@ -6,7 +6,7 @@
 # } else {
 #     i = 0;
 # }
-slt $t4, $s0, $s1 #retorn 1 se a for menor
+slt $t4, $s0, $s1 #retorna 1 se a for menor
 beq $t4, $zero, ELSE
 add $t0, $t1, $zero
 j EXIT
