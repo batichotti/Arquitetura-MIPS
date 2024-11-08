@@ -20,5 +20,7 @@ add $t4, $t0, $t1 # i+j
 sll $t5, $t4, 2 # transforma i+j em desvio
 add $t5, $t4, $s2 # seta &D[i+j]
 sw $t4, 0($t5) # D[i+j] = i+j
+addi $t1, $t1, 1
 j FOR_j
+addi $t0, $t0, 1
 j FOR_i
