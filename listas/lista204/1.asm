@@ -31,12 +31,37 @@ EXIT:
 #     i++;
 # }
 
+LOOP:
+sll $t5, $t0, 2
+add $t5, $t5, $s2 # &D[i]
+lw $t6, 0($t5)
+beq $t6, $0, EXIT
+addi $t0, $t0, 1
+j LOOP
+EXIT:
+
 # d)
 # if (D[i] < a) {
 #     D[j] += b;
 # } else {
 #     D[i] += b;
 # }
+
+sll $t5, $t0, 2
+add $t5, $t5, $s2 # &D[i]
+lw $t6, 0($t5)
+slt $t7, $t6, $s0
+beq $t7, $0, ELSE
+sll $t5, $t0, 2
+add $t5, $t5, $s2 # &D[j]
+lw $t6, 0($t5)
+add $t6, $t6, $s1
+sw $t6, 0($t5)
+j EXIT
+ELSE:
+add $t6, $t6, $s1
+sw $t6, 0($t5)
+EXIT:
 
 # e)
 # if (D[i+j] < D[i]) {
@@ -45,6 +70,21 @@ EXIT:
 # } else {
 #     D[i] -= D[i+j];
 # }
+
+sll $t5, $t0, 2
+add $t6, $t5, $s2 # &D[i]
+lw $t8, 0($t6)
+add $t3, $t0, $t1
+sll $t3, $t3, 2
+add $t7, $t3, $s2 # &D[i+j]
+lw $t9, 0($t7)
+slt $t2, $t9, $t8
+beq $t2, $0, ELSE
+
+j EXIT
+ELSE:
+add $  
+EXIT:
 
 # f)
 # while (D[i+j] < a)
