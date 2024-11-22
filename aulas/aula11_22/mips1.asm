@@ -2,6 +2,7 @@
 MAIN:
 addi $s0, $0, 4
 jal SOMAVET
+syscall exit
 
 
 # int somavet(int vet[], int n){
