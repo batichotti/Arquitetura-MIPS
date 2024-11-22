@@ -26,4 +26,5 @@ EXIT:
 add $v0, $s0, $0
 lw $s0, 0($sp) # logando o estado depois da execução
 lw $s1, 4($s1)
+addi $sp, $sp, 8
 jr $ra
