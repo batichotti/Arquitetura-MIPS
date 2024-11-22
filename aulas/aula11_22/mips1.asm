@@ -1,3 +1,9 @@
+# int main(){... return 0;}
+MAIN:
+addi $s0, $0, 4
+jal SOMAVET
+
+
 # int somavet(int vet[], int n){
 #	int ac = 0;
 #	for (int i = 0; i < n; i++){
