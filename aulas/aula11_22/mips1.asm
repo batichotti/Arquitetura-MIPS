@@ -2,7 +2,8 @@
 MAIN:
 addi $s0, $0, 4
 jal SOMAVET
-syscall exit
+addi $v0, $0, 10 # 10 -> exit
+syscall $v0
 
 
 # int somavet(int vet[], int n){
