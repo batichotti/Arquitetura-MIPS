@@ -53,8 +53,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(530,60)" to="(530,260)"/>
     <wire from="(140,750)" to="(220,750)"/>
-    <wire from="(120,260)" to="(150,260)"/>
+    <wire from="(530,260)" to="(530,1150)"/>
+    <wire from="(120,260)" to="(530,260)"/>
     <wire from="(110,580)" to="(200,580)"/>
     <wire from="(1270,950)" to="(1340,950)"/>
     <wire from="(220,740)" to="(220,750)"/>
