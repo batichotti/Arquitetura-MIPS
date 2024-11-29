@@ -53,10 +53,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(120,260)" to="(180,260)"/>
-    <wire from="(130,430)" to="(200,430)"/>
-    <wire from="(200,420)" to="(200,430)"/>
+    <wire from="(140,750)" to="(220,750)"/>
+    <wire from="(120,260)" to="(150,260)"/>
+    <wire from="(110,580)" to="(200,580)"/>
     <wire from="(1270,950)" to="(1340,950)"/>
+    <wire from="(220,740)" to="(220,750)"/>
     <wire from="(1340,410)" to="(1340,440)"/>
     <wire from="(1290,440)" to="(1340,440)"/>
     <wire from="(1340,860)" to="(1340,950)"/>
@@ -74,6 +75,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(610,430)" name="Register">
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(110,580)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="REGWRITE"/>
     </comp>
     <comp lib="4" loc="(820,430)" name="Register">
       <a name="width" val="32"/>
@@ -97,11 +102,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="4" loc="(820,570)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(130,430)" name="Pin">
-      <a name="width" val="5"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="WR"/>
-    </comp>
     <comp lib="0" loc="(1290,440)" name="Pin">
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
@@ -110,14 +110,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="4" loc="(610,640)" name="Register">
       <a name="width" val="32"/>
     </comp>
+    <comp lib="2" loc="(200,580)" name="Demultiplexer">
+      <a name="select" val="5"/>
+    </comp>
     <comp lib="4" loc="(820,850)" name="Register">
       <a name="width" val="32"/>
     </comp>
     <comp lib="4" loc="(820,920)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="2" loc="(180,260)" name="Demultiplexer">
-      <a name="select" val="5"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="4" loc="(820,360)" name="Register">
@@ -158,10 +157,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="4" loc="(820,500)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(90,530)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="REGWRITE"/>
-    </comp>
     <comp lib="0" loc="(1480,250)" name="Pin">
       <a name="facing" val="west"/>
       <a name="width" val="32"/>
@@ -173,6 +168,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="4" loc="(820,780)" name="Register">
       <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(140,750)" name="Pin">
+      <a name="width" val="5"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="WR"/>
     </comp>
     <comp lib="0" loc="(120,260)" name="Pin">
       <a name="width" val="32"/>
