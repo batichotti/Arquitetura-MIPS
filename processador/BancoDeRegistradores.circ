@@ -53,34 +53,48 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(670,940)" to="(740,940)"/>
-    <wire from="(740,850)" to="(740,940)"/>
-    <wire from="(690,430)" to="(740,430)"/>
-    <wire from="(740,400)" to="(740,430)"/>
     <wire from="(120,260)" to="(180,260)"/>
     <wire from="(130,430)" to="(200,430)"/>
     <wire from="(200,420)" to="(200,430)"/>
-    <comp lib="4" loc="(360,910)" name="Register">
+    <wire from="(1270,950)" to="(1340,950)"/>
+    <wire from="(1340,410)" to="(1340,440)"/>
+    <wire from="(1290,440)" to="(1340,440)"/>
+    <wire from="(1340,860)" to="(1340,950)"/>
+    <comp lib="4" loc="(610,290)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="2" loc="(760,690)" name="Multiplexer">
+    <comp lib="4" loc="(610,220)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(610,850)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(820,80)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(610,430)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(820,430)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(610,920)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(610,570)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(610,780)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(1360,700)" name="Multiplexer">
       <a name="select" val="5"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(360,280)" name="Register">
+    <comp lib="4" loc="(610,150)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(460,560)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="4" loc="(360,210)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="4" loc="(360,700)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="2" loc="(760,240)" name="Multiplexer">
-      <a name="select" val="5"/>
+    <comp lib="4" loc="(820,570)" name="Register">
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(130,430)" name="Pin">
@@ -88,77 +102,76 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="WR"/>
     </comp>
-    <comp lib="4" loc="(360,630)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="4" loc="(360,1120)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="4" loc="(460,630)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="4" loc="(460,840)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(870,720)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="LD2"/>
-    </comp>
-    <comp lib="4" loc="(460,1050)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(670,940)" name="Pin">
+    <comp lib="0" loc="(1290,440)" name="Pin">
       <a name="width" val="5"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="LR2"/>
+      <a name="label" val="LR1"/>
     </comp>
-    <comp lib="4" loc="(360,980)" name="Register">
+    <comp lib="4" loc="(610,640)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(840,270)" name="Pin">
-      <a name="facing" val="west"/>
+    <comp lib="4" loc="(820,850)" name="Register">
       <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="LD1"/>
+    </comp>
+    <comp lib="4" loc="(820,920)" name="Register">
+      <a name="width" val="32"/>
     </comp>
     <comp lib="2" loc="(180,260)" name="Demultiplexer">
       <a name="select" val="5"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(360,770)" name="Register">
+    <comp lib="4" loc="(820,360)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(360,1050)" name="Register">
+    <comp lib="0" loc="(1270,950)" name="Pin">
+      <a name="width" val="5"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="LR2"/>
+    </comp>
+    <comp lib="4" loc="(610,360)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(360,840)" name="Register">
+    <comp lib="4" loc="(610,710)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(460,210)" name="Register">
+    <comp lib="4" loc="(610,1130)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(360,350)" name="Register">
+    <comp lib="0" loc="(1470,710)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="LD2"/>
+    </comp>
+    <comp lib="4" loc="(820,1130)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(460,350)" name="Register">
+    <comp lib="4" loc="(820,990)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(360,70)" name="Register">
+    <comp lib="4" loc="(820,640)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(460,980)" name="Register">
+    <comp lib="4" loc="(610,500)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(460,420)" name="Register">
+    <comp lib="4" loc="(820,500)" name="Register">
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(90,530)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="REGWRITE"/>
     </comp>
-    <comp lib="4" loc="(460,490)" name="Register">
+    <comp lib="0" loc="(1480,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="LD1"/>
+    </comp>
+    <comp lib="4" loc="(610,990)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(820,780)" name="Register">
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(120,260)" name="Pin">
@@ -166,42 +179,29 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="WD"/>
     </comp>
-    <comp lib="4" loc="(460,700)" name="Register">
+    <comp lib="4" loc="(820,1060)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(460,140)" name="Register">
+    <comp lib="4" loc="(820,710)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(460,70)" name="Register">
+    <comp lib="4" loc="(610,1060)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(460,770)" name="Register">
+    <comp lib="4" loc="(610,80)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(360,140)" name="Register">
+    <comp lib="4" loc="(820,150)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(360,490)" name="Register">
+    <comp lib="2" loc="(1360,250)" name="Multiplexer">
+      <a name="select" val="5"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(460,910)" name="Register">
+    <comp lib="4" loc="(820,290)" name="Register">
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(460,1120)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(690,430)" name="Pin">
-      <a name="width" val="5"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="LR1"/>
-    </comp>
-    <comp lib="4" loc="(360,420)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="4" loc="(360,560)" name="Register">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="4" loc="(460,280)" name="Register">
+    <comp lib="4" loc="(820,220)" name="Register">
       <a name="width" val="32"/>
     </comp>
   </circuit>
