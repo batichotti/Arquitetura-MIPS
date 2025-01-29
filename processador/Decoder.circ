@@ -57,8 +57,19 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(390,210)" to="(390,360)"/>
-    <wire from="(230,170)" to="(270,170)"/>
+    <appear>
+      <rect fill="none" height="167" stroke="#000000" stroke-width="2" width="40" x="150" y="17"/>
+      <circ-port height="8" pin="150,200" width="8" x="146" y="96"/>
+      <circ-port height="10" pin="450,80" width="10" x="185" y="125"/>
+      <circ-port height="10" pin="450,130" width="10" x="185" y="105"/>
+      <circ-port height="10" pin="600,130" width="10" x="185" y="145"/>
+      <circ-port height="10" pin="270,170" width="10" x="185" y="165"/>
+      <circ-port height="10" pin="450,180" width="10" x="185" y="85"/>
+      <circ-port height="10" pin="450,230" width="10" x="185" y="65"/>
+      <circ-port height="10" pin="450,280" width="10" x="185" y="45"/>
+      <circ-port height="10" pin="250,330" width="10" x="185" y="25"/>
+      <circ-anchor facing="east" height="6" width="6" x="147" y="97"/>
+    </appear>
     <wire from="(180,200)" to="(180,360)"/>
     <wire from="(170,200)" to="(170,370)"/>
     <wire from="(560,210)" to="(560,370)"/>
@@ -70,28 +81,22 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(180,360)" to="(390,360)"/>
     <wire from="(150,200)" to="(170,200)"/>
     <wire from="(230,330)" to="(250,330)"/>
+    <wire from="(390,210)" to="(390,360)"/>
     <wire from="(180,200)" to="(190,200)"/>
     <wire from="(170,200)" to="(180,200)"/>
     <wire from="(170,370)" to="(560,370)"/>
-    <comp lib="0" loc="(450,280)" name="Pin">
+    <wire from="(230,170)" to="(270,170)"/>
+    <comp lib="0" loc="(450,180)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="5"/>
-      <a name="label" val="RS"/>
+      <a name="label" val="RD"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(430,230)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+    <comp lib="0" loc="(560,210)" name="Splitter">
+      <a name="fanout" val="32"/>
+      <a name="incoming" val="32"/>
       <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(270,170)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="26"/>
-      <a name="label" val="ADDR"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(450,230)" name="Pin">
       <a name="facing" val="west"/>
@@ -99,6 +104,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="5"/>
       <a name="label" val="RT"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(230,170)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="26"/>
+      <a name="incoming" val="26"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(430,230)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+      <a name="appear" val="center"/>
     </comp>
     <comp lib="0" loc="(430,80)" name="Splitter">
       <a name="facing" val="west"/>
@@ -111,15 +128,36 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="incoming" val="32"/>
       <a name="appear" val="center"/>
     </comp>
+    <comp lib="0" loc="(450,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+      <a name="label" val="RS"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="0" loc="(150,200)" name="Pin">
       <a name="width" val="32"/>
       <a name="tristate" val="false"/>
       <a name="label" val="INST"/>
     </comp>
-    <comp lib="0" loc="(230,170)" name="Splitter">
+    <comp lib="0" loc="(250,330)" name="Pin">
       <a name="facing" val="west"/>
-      <a name="fanout" val="26"/>
-      <a name="incoming" val="26"/>
+      <a name="output" val="true"/>
+      <a name="width" val="6"/>
+      <a name="label" val="Opcode"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(450,130)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+      <a name="label" val="SHAMT"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,280)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
       <a name="appear" val="center"/>
     </comp>
     <comp lib="0" loc="(450,80)" name="Pin">
@@ -129,48 +167,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="FUNCT"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(250,330)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="6"/>
-      <a name="label" val="Opcode"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(430,180)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(450,130)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="5"/>
-      <a name="label" val="SHAMT"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(560,210)" name="Splitter">
-      <a name="fanout" val="32"/>
-      <a name="incoming" val="32"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(600,130)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(430,280)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(190,200)" name="Splitter">
-      <a name="fanout" val="32"/>
-      <a name="incoming" val="32"/>
-      <a name="appear" val="center"/>
-    </comp>
     <comp lib="0" loc="(600,130)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -178,23 +174,40 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="IMM"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(270,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="26"/>
+      <a name="label" val="ADDR"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(190,200)" name="Splitter">
+      <a name="fanout" val="32"/>
+      <a name="incoming" val="32"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(430,130)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(430,180)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+      <a name="appear" val="center"/>
+    </comp>
     <comp lib="0" loc="(230,330)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="6"/>
       <a name="incoming" val="6"/>
       <a name="appear" val="center"/>
     </comp>
-    <comp lib="0" loc="(450,180)" name="Pin">
+    <comp lib="0" loc="(600,130)" name="Splitter">
       <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="5"/>
-      <a name="label" val="RD"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(430,130)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
       <a name="appear" val="center"/>
     </comp>
   </circuit>
