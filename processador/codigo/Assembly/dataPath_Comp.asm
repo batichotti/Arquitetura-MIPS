@@ -67,5 +67,6 @@ jal SHIFT_LEFT
 add $s5, $zero, $v1
 
 END:
+add $s2, $s2, $0
 add $s5, $s5, $0
 j END
