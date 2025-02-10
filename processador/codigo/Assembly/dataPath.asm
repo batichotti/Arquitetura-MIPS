@@ -140,3 +140,7 @@ MAIN:
   #Retorno de SHIFT_LEFT
   #Recuperando Variáveis
   add $s5, $zero, $v1 # int d = shiftLeft(v, n) // $s5 = d
+  END:
+  add $s2, $s2, $0
+  add $s5, $s5, $0
+  j END

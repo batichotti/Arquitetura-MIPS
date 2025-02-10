@@ -3,10 +3,10 @@ j MAIN
 SOMA: add $s2, $a0, $s2
 jr $ra
 
-MULT: addi $sp, $sp, -16
+MULT: addi $sp, $sp, -12
 sw $ra, 0($sp)
 sw $s0, 4($sp)
-sw $s1, 12($sp)
+sw $s1, 8($sp)
 addi $s2, $zero, 0
 
 MULT_LOOP: beq $a1, $zero, MULT_LOOP_EXIT
@@ -17,16 +17,16 @@ j MULT_LOOP
 MULT_LOOP_EXIT: add $v0, $zero, $s2
 lw $ra, 0($sp)
 lw $s0, 4($sp)
-lw $s1, 12($sp)
-addi $sp, $sp, 16
+lw $s1, 8($sp)
+addi $sp, $sp, 12
 jr $ra
 
-SHIFT_LEFT: addi $sp, $sp, -24
+SHIFT_LEFT: addi $sp, $sp, -20
 sw $s0, 0($sp)
 sw $s1, 4($sp)
-sw $s2, 12($sp)
-sw $s3, 16($sp)
-sw $s4, 20($sp)
+sw $s2, 8($sp)
+sw $s3, 12($sp)
+sw $s4, 16($sp)
 
 SL_LOOP: slt $t2, $zero, $a3
 bne $t2, 1, SL_LOOP_EXIT
@@ -37,10 +37,10 @@ j SL_LOOP
 SL_LOOP_EXIT: add $v1, $zero, $a2
 lw $s0, 0($sp)
 lw $s1, 4($sp)
-lw $s2, 12($sp)
-lw $s3, 16($sp)
-lw $s4, 20($sp)
-addi $sp, $sp, 24
+lw $s2, 8($sp)
+lw $s3, 12($sp)
+lw $s4, 16($sp)
+addi $sp, $sp, 20
 jr $ra
 
 MAIN: addi $s0, $zero, 7
